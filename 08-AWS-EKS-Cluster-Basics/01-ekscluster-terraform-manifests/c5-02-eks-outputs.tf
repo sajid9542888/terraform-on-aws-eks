@@ -26,7 +26,7 @@ output "cluster_version" {
 
 output "cluster_iam_role_name" {
   description = "IAM role name of the EKS cluster."
-  value       = aws_iam_role.eks_master_role.name 
+  value       = aws_iam_role.eks_master_role.name
 }
 
 output "cluster_iam_role_arn" {
@@ -44,29 +44,13 @@ output "cluster_primary_security_group_id" {
   value       = aws_eks_cluster.eks_cluster.vpc_config[0].cluster_security_group_id
 }
 
-# EKS Node Group Outputs - Public
-output "node_group_public_id" {
-  description = "Public Node Group ID"
-  value       = aws_eks_node_group.eks_ng_public.id
-}
 
-output "node_group_public_arn" {
-  description = "Public Node Group ARN"
-  value       = aws_eks_node_group.eks_ng_public.arn
-}
 
-output "node_group_public_status" {
-  description = "Public Node Group status"
-  value       = aws_eks_node_group.eks_ng_public.status 
-}
 
-output "node_group_public_version" {
-  description = "Public Node Group Kubernetes Version"
-  value       = aws_eks_node_group.eks_ng_public.version
-}
+
 
 # EKS Node Group Outputs - Private
-/*
+
 output "node_group_private_id" {
   description = "Node Group 1 ID"
   value       = aws_eks_node_group.eks_ng_private.id
@@ -87,4 +71,3 @@ output "node_group_private_version" {
   value       = aws_eks_node_group.eks_ng_private.version
 }
 
-*/
